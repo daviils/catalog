@@ -1,0 +1,106 @@
+/*
+Template Name: Material Pro Admin
+Author: Themedesigner
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+// Variables
+
+$bodyfont: 'Poppins', sans-serif;
+$headingfont: 'Poppins', sans-serif;
+
+$primary: #6b2394;
+$secondary: #FF0361;
+
+$bodycolor: #eef5f9;
+$headingtext: #455a64;
+$bodytext: #67757c;
+$sidebar-text: #607d8b;
+$sidebar-icons: #99abb4;
+
+
+$themecolor: #1e88e5;
+
+/*bootstrap Color*/
+$danger: #fc4b6c;
+$success: #26c6da;
+$warning: #ffb22b;
+$info: #1e88e5;
+$inverse: #2f3d4a;
+$muted: #99abb4;
+$dark: #263238;
+$light: #f2f4f8;
+$extra-light: #ebf3f5;
+/*Light colors*/
+$light-danger: #f9e7eb;
+$light-success: #e8fdf8;
+$light-warning: #fff8ec;
+$light-primary: #f1effd;
+$light-info: #e3f3fd;
+$light-inverse: #f6f6f6;
+$light-megna: #e0f2f4;
+
+$danger-dark: #e6294b;
+$success-dark: #1eacbe;
+$warning-dark: #e9ab2e;
+$primary-dark: #6352ce;
+
+/*Normal Color*/
+$white: #ffffff;
+$purple: #7460ee;
+
+/*Extra Variable*/
+$rgt: right;
+$lft: left;
+$border: rgba(120, 130, 140, 0.13);
+$radius: 4px;
+
+//PALETTE
+$mat-primary: (
+  50: #f3e6f4,
+  100: #e1bfe6,
+  200: #b96cc5,
+  300: #b96cc5,
+  400: #aa4db8,
+  500: #9b31ab,
+  600: #8d2da5,
+  700: #7b279d,
+  800: #6b2394,
+  900: #4d1b85,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  )
+);
+$mat-secondary: (
+  50: #ffe4ec,
+  100: #ffbcd0,
+  200: #ff90b1,
+  300: #ff6191,
+  400: #ff3a78,
+  500: #FF0361,
+  600: #ee005d,
+  700: #d80059,
+  800: #c30057,
+  900: #9f0052,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  )
+);

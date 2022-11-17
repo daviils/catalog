@@ -1,0 +1,29 @@
+<div class="main-container">
+  <mat-toolbar>
+    <div style="display: flex;width: 100%;align-items: center">
+      <button mat-button routerLink="home">Home</button>
+      <button mat-button routerLink="catalog">Catalog</button>
+      <button mat-button routerLink="typography">typography</button>
+
+      <span class="spacer"></span>
+      <mat-slide-toggle class="ml-10" (change)="handlerMode($event)">
+      </mat-slide-toggle>
+      <button mat-button [matMenuTriggerFor]="menu">
+        <span class="mat-h2">{{'welcome' | translate}}, Fulano</span>
+        <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button (click)="handlerCultureLanguage('pt-BR')" mat-menu-item>PT</button>
+        <button (click)="handlerCultureLanguage('en-US')" mat-menu-item>EN</button>
+        <button (click)="handlerCultureLanguage('es-ES')" mat-menu-item>ES</button>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
+

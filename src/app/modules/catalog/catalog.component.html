@@ -1,0 +1,71 @@
+<div class="container">
+  <div fxLayout="row wrap" fxLayoutGap="20px grid">
+    <div class="my-5" [fxFlex]="gridView.col12">
+      <span class="mat-caption">Home</span>
+      <span class="mat-caption mx-3">/</span>
+      <span class="mat-caption">Catalog</span>
+    </div>
+    <div [fxFlex]="gridView.col12">
+      <div fxLayout="row" fxLayoutAlign=" center" fxLayoutGap="10px grid">
+        <p class="mat-display-1 mb-0">Catalog</p>
+        <mat-icon matBadge="3" class="demo-section">tune</mat-icon>
+      </div>
+
+    </div>
+    <div [fxFlex]="gridView.col4">
+      <mat-accordion class="example-headers-align" multi>
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Category
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>This is the primary content of the panel.</p>
+        </mat-expansion-panel>
+        <mat-divider></mat-divider>
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Price range
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>This is the primary content of the panel.</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+
+    </div>
+
+
+    <div [fxFlex]="gridView.col8">
+      <div fxLayout="row wrap" fxLayoutGap="20px grid">
+        <div [fxFlex]="gridView.col4" *ngFor="let x of [].constructor(9)">
+          <mat-card class="catalog_card">
+            <mat-card-header>
+              <span class="spacer"></span>
+              <mat-icon>favorite</mat-icon>
+            </mat-card-header>
+            <img class="catalog_img" mat-card-image src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/brazilian/ds4_controller.png"
+                 alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <mat-card-title>Shiba Inu</mat-card-title>
+              <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+              <p>
+                The Shiba Inu is the smallest of the six original
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <div fxLayout="row">
+                <button fxFlex mat-raised-button color="primary">Buy</button>
+                <button mat-stroked-button>
+                  <mat-icon>shopping_cart</mat-icon>
+                </button>
+              </div>
+
+            </mat-card-actions>
+          </mat-card>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

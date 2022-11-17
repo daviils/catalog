@@ -1,0 +1,16 @@
+.catalog {
+  &_card {
+    box-shadow: none !important;
+    .mat-card-header {
+      padding-bottom: 1rem;
+    }
+  }
+  &_img{
+    object-fit: cover;
+  }
+}
+
+.mat-expansion-panel {
+  background-color: transparent;
+  box-shadow: none !important;
+}
