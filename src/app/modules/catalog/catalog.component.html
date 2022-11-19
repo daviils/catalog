@@ -36,15 +36,16 @@
     </div>
 
 
-    <div [fxFlex]="gridView.col8">
+    <div fxFlex="{{gridView.col8}}">
       <div fxLayout="row wrap" fxLayoutGap="20px grid">
-        <div [fxFlex]="gridView.col4" *ngFor="let x of [].constructor(9)">
+        <div fxFlex="{{gridView.col4}}" *ngFor="let x of [].constructor(9)">
           <mat-card class="catalog_card">
             <mat-card-header>
               <span class="spacer"></span>
               <mat-icon>favorite</mat-icon>
             </mat-card-header>
-            <img class="catalog_img" mat-card-image src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/brazilian/ds4_controller.png"
+            <img class="catalog_img" mat-card-image
+                 src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/brazilian/ds4_controller.png"
                  alt="Photo of a Shiba Inu">
             <mat-card-content>
               <mat-card-title>Shiba Inu</mat-card-title>

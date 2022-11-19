@@ -1,0 +1,14 @@
+@function theme-background-change($theme, $value) {
+  // Replace the background in the color object's background palette.
+  $theme-color: map-get($theme, color);
+  $color-background-palette: map-get($theme-color, background);
+
+  @each $color-name, $color-value in $value {
+    $color-background-palette: map-merge($color-background-palette, ($color-name: $color-value));
+  }
+  // Merge the changes into a new theme.
+  $modified-theme-color: map-merge($theme-color, (background: $color-background-palette));
+  $modified-theme: map-merge($theme, (color: $modified-theme-color));
+
+  @return $modified-theme;
+}
