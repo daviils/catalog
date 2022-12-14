@@ -1,59 +1,9 @@
-/*
-Template Name: Material Pro Admin
-Author: Themedesigner
-Email: niravjoshi87@gmail.com
-File: scss
-*/
-// Variables
+@use '@angular/material' as mat;
+@use 'function/custom-backgroud' as custom;
 
-$bodyfont: 'Poppins', sans-serif;
-$headingfont: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
 
-$primary: #6b2394;
-$secondary: #FF0361;
-
-$bodycolor: #eef5f9;
-$headingtext: #455a64;
-$bodytext: #67757c;
-$sidebar-text: #607d8b;
-$sidebar-icons: #99abb4;
-
-
-$themecolor: #1e88e5;
-
-/*bootstrap Color*/
-$danger: #fc4b6c;
-$success: #26c6da;
-$warning: #ffb22b;
-$info: #1e88e5;
-$inverse: #2f3d4a;
-$muted: #99abb4;
-$dark: #263238;
-$light: #f2f4f8;
-$extra-light: #ebf3f5;
-/*Light colors*/
-$light-danger: #f9e7eb;
-$light-success: #e8fdf8;
-$light-warning: #fff8ec;
-$light-primary: #f1effd;
-$light-info: #e3f3fd;
-$light-inverse: #f6f6f6;
-$light-megna: #e0f2f4;
-
-$danger-dark: #e6294b;
-$success-dark: #1eacbe;
-$warning-dark: #e9ab2e;
-$primary-dark: #6352ce;
-
-/*Normal Color*/
-$white: #ffffff;
-$purple: #7460ee;
-
-/*Extra Variable*/
-$rgt: right;
-$lft: left;
-$border: rgba(120, 130, 140, 0.13);
-$radius: 4px;
+@include mat.core();
 
 //PALETTE
 $mat-primary: (
@@ -104,3 +54,66 @@ $mat-secondary: (
     900: white,
   )
 );
+
+//LIGHT MODE
+$light-theme: mat.define-light-theme((
+  color: (
+    primary: mat.define-palette($mat-primary, 800),
+    accent: mat.define-palette($mat-secondary, 500),
+    warn: mat.define-palette(mat.$red-palette, 500),
+  )
+));
+$light-background-custom: (
+  status-bar: map-get(mat.$grey-palette, 300),
+  app-bar: white,
+  background: white,
+  hover: rgba(black, 0.04),
+  card: map-get($mat-primary, 50),
+  dialog: white,
+  disabled-button: rgba(black, 0.12),
+  raised-button: white,
+  focused-button: rgba(black, 0.12),
+  selected-button: map-get(mat.$grey-palette, 300),
+  selected-disabled-button: map-get(mat.$grey-palette, 400),
+  disabled-button-toggle: map-get(mat.$grey-palette, 200),
+  unselected-chip: map-get(mat.$grey-palette, 300),
+  disabled-list-option: map-get(mat.$grey-palette, 200),
+  tooltip: map-get(mat.$grey-palette, 700),
+);
+$light-theme: custom.theme-background-change($light-theme, $light-background-custom);
+
+$my-custom-typography: mat.define-typography-config(
+  $font-family: 'Poppins, sans-serif',
+  $display-4: mat.define-typography-level(112px, 112px, 300),
+  $display-3: mat.define-typography-level(56px, 56px, 400),
+  $display-2: mat.define-typography-level(45px, 48px, 400),
+  $display-1: mat.define-typography-level(34px, 40px, 400),
+  $headline: mat.define-typography-level(24px, 32px, 400),
+);
+
+//DARK MODE
+$dark-theme: mat.define-dark-theme((
+  color: (
+    primary: mat.define-palette($mat-primary, 800),
+    accent: mat.define-palette($mat-secondary, 500),
+    warn: mat.define-palette(mat.$red-palette, 500),
+  ),
+));
+$dark-background-custom: (
+  status-bar: black,
+  app-bar:    #303030,
+  background: #303030,
+  hover:      rgba(white, 0.04),
+  card:       map-get(mat.$grey-palette, 800),
+  dialog:     map-get(mat.$grey-palette, 800),
+  disabled-button: rgba(white, 0.12),
+  raised-button: map-get(mat.$grey-palette, 800),
+  focused-button: rgba(white, 0.12),
+  selected-button: map-get(mat.$grey-palette, 900),
+  selected-disabled-button: map-get(mat.$grey-palette, 800),
+  disabled-button-toggle: black,
+  unselected-chip: map-get(mat.$grey-palette, 700),
+  disabled-list-option: rgba(white, 0.12),
+  tooltip: map-get(mat.$grey-palette, 700),
+);
+$dark-theme: custom.theme-background-change($dark-theme, $dark-background-custom);

@@ -1,11 +1,9 @@
 .catalog {
   &_card {
     box-shadow: none !important;
-    .mat-card-header {
-      padding-bottom: 1rem;
-    }
   }
-  &_img{
+
+  &_img {
     object-fit: contain;
     height: 121px;
   }
@@ -15,3 +13,4 @@
   background-color: transparent;
   box-shadow: none !important;
 }
+

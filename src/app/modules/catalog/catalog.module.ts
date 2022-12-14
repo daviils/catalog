@@ -10,6 +10,10 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatBadgeModule} from "@angular/material/badge";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatDividerModule} from "@angular/material/divider";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatInputModule} from "@angular/material/input";
+import {MatSliderModule} from "@angular/material/slider";
+import {MatSelectModule} from "@angular/material/select";
 
 
 @NgModule({
@@ -25,7 +29,11 @@ import {MatDividerModule} from "@angular/material/divider";
     MatIconModule,
     MatBadgeModule,
     MatExpansionModule,
-    MatDividerModule
+    MatDividerModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatSliderModule,
+    MatSelectModule
   ]
 })
 export class CatalogModule {

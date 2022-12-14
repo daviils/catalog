@@ -9,6 +9,11 @@ import {TranslateService} from "@ngx-translate/core";
   styleUrls: ['./catalog.component.scss']
 })
 export class CatalogComponent extends BaseComponent implements OnInit {
+  foods: any[] = [
+    {value: 'steak-0', viewValue: 'Steak'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'},
+  ];
 
   constructor(public router: Router,
               public translate: TranslateService) {
