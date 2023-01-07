@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {BaseComponent} from "../../core/base.component";
 import {Router} from "@angular/router";
 import {TranslateService} from "@ngx-translate/core";
+import {MatSidenav} from "@angular/material/sidenav";
 
 declare var $: any;
 
@@ -11,8 +12,8 @@ declare var $: any;
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent extends BaseComponent implements OnInit {
+  @ViewChild('sidenav') _sidenav!: MatSidenav;
   language = super.accessLanguage.length === 0 ? 'pt-BR' : super.accessLanguage;
-  slider: any = 50;
 
   constructor(public router: Router,
               public translate: TranslateService) {
@@ -25,12 +26,11 @@ export class MainComponent extends BaseComponent implements OnInit {
     super.handlerCultureLanguage(this.language);
   }
 
-  onSubmitSlider(): number {
-    return this.slider.value
-  }
-
   handlerMode(event: any) {
     $('#mode').toggleClass('dark-mode')
   }
 
+  close() {
+    this._sidenav.close();
+  }
 }

@@ -1,28 +1,62 @@
 <div class="main-container">
-  <mat-toolbar>
-    <div style="display: flex;width: 100%;align-items: center">
-      <button mat-button routerLink="home">Home</button>
-      <button mat-button routerLink="catalog">Catalog</button>
-      <button mat-button routerLink="typography">typography</button>
+  <mat-sidenav-container class="sidenav-container" (backdropClick)="close()">
 
-      <span class="spacer"></span>
-      <mat-slide-toggle class="ml-10" (change)="handlerMode($event)">
-      </mat-slide-toggle>
-      <button mat-button [matMenuTriggerFor]="menu">
-        <span class="mat-h2">{{'welcome' | translate}}, Fulano</span>
-        <mat-icon>arrow_drop_down</mat-icon>
-      </button>
-      <mat-menu #menu="matMenu">
-        <button (click)="handlerCultureLanguage('pt-BR')" mat-menu-item>PT</button>
-        <button (click)="handlerCultureLanguage('en-US')" mat-menu-item>EN</button>
-        <button (click)="handlerCultureLanguage('es-ES')" mat-menu-item>ES</button>
-      </mat-menu>
-    </div>
-  </mat-toolbar>
-  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav (keydown.escape)="close()" disableClose>
+      <div fxLayout="column" fxLayoutAlign="space-between center">
+        <div fxLayout="column">
+          <button mat-button [matMenuTriggerFor]="menu">
+            <span class="mat-h2">{{'welcome' | translate}}, Fulano</span>
+            <mat-icon>arrow_drop_down</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button (click)="handlerCultureLanguage('pt-BR')" mat-menu-item>PT</button>
+            <button (click)="handlerCultureLanguage('en-US')" mat-menu-item>EN</button>
+            <button (click)="handlerCultureLanguage('es-ES')" mat-menu-item>ES</button>
+          </mat-menu>
+          <button mat-button routerLink="home">Home</button>
+          <button mat-button routerLink="catalog">Catalog</button>
+          <button mat-button routerLink="typography">typography</button>
+        </div>
+
+        <div class="mt-10">
+          <mat-slide-toggle (change)="handlerMode($event)">
+          </mat-slide-toggle>
+        </div>
+      </div>
+    </mat-sidenav>
+
     <mat-sidenav-content>
-        <router-outlet></router-outlet>
+      <!--DESKTOP-->
+      <mat-toolbar [ngStyle.lt-sm]="{'display':'none'}">
+        <button mat-button routerLink="home">Home</button>
+        <button mat-button routerLink="catalog">Catalog</button>
+        <button mat-button routerLink="typography">typography</button>
+        <span class="spacer"></span>
+        <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
+          <mat-form-field class="main_search" appearance="outline">
+            <label>
+              <input matInput placeholder="Search Itens">
+            </label>
+            <button mat-icon-button matSuffix>
+              <mat-icon>search</mat-icon>
+            </button>
+          </mat-form-field>
+          <mat-icon>person</mat-icon>
+          <mat-icon matBadge="10">shopping_bag</mat-icon>
+        </div>
+      </mat-toolbar>
+      <!--MOBILE-->
+      <mat-toolbar [ngStyle]="{'display': 'none'}" [ngStyle.lt-sm]="{'display':'flex'}">
+        <div style="width: 100%;" fxLayout="row" fxLayoutAlign="end center">
+          <button mat-flat-button (click)="sidenav.open()">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+
     </mat-sidenav-content>
+
   </mat-sidenav-container>
 </div>
 

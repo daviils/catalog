@@ -1,0 +1,23 @@
+@use '@angular/material' as mat;
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%
+}
+
+
+.mat-toolbar {
+  min-height: 64px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.main_search {
+  font-size: 13px;
+
+  .mat-form-field-wrapper {
+    padding-bottom: 0;
+  }
+}

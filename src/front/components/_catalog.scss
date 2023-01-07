@@ -1,0 +1,14 @@
+@use '@angular/material' as mat;
+
+.catalog {
+
+  &_card {
+    box-shadow: none !important;
+    background: map-get($mat-primary, 50);
+  }
+
+  &_img {
+    object-fit: contain;
+    height: 197px;
+  }
+}

@@ -23,4 +23,7 @@ export class CatalogComponent extends BaseComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  handlerMode(event: any) {
+  }
+
 }

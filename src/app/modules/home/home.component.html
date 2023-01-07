@@ -1,3 +1,24 @@
 <div class="container">
-  <p>home works!</p>
+  <div fxLayout="row wrap">
+    <div fxFlex="50">
+      <h1 class="mat-display-3 mb-0">Make life different.<br>
+        Your life -- a ride</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare nisi vitae venenatis tristique.
+        Phasellus neque tortor, facilisis quis consequat quis, volutpat eget lacus.
+      </p>
+      <button mat-flat-button color="primary">Buy $99,99</button>
+    </div>
+  </div>
+  <mat-grid-list  [gutterSize]="'10px'" cols="4" rowHeight="250px">
+    <mat-grid-tile
+      class="home_card"
+      *ngFor="let tile of tiles"
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows">
+      <div>
+        {{tile.text}}
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
 </div>

@@ -26,3 +26,12 @@ html {
 .mat-slider {
   width: 100%;
 }
+
+.cdk-overlay-container {
+  background: rgba(0, 0, 0, .32);
+}
+
+.mat-expansion-panel {
+  background-color: transparent;
+  box-shadow: none !important;
+}

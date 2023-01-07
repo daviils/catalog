@@ -7,16 +7,16 @@
 
 //PALETTE
 $mat-primary: (
-  50: #f3e6f4,
-  100: #e1bfe6,
-  200: #b96cc5,
-  300: #b96cc5,
-  400: #aa4db8,
-  500: #9b31ab,
-  600: #8d2da5,
-  700: #7b279d,
-  800: #6b2394,
-  900: #4d1b85,
+  50: #e7ebfa,
+  100: #c3ccf3,
+  200: #9aabeb,
+  300: #6e8ae3,
+  400: #476fdd,
+  500: #0056d6,
+  600: #004dcb,
+  700: #0043bf,
+  800: #0039b4,
+  900: #0025a1,
   contrast: (
     50: rgba(black, 0.87),
     100: rgba(black, 0.87),
@@ -58,8 +58,8 @@ $mat-secondary: (
 //LIGHT MODE
 $light-theme: mat.define-light-theme((
   color: (
-    primary: mat.define-palette($mat-primary, 800),
-    accent: mat.define-palette($mat-secondary, 500),
+    primary: mat.define-palette($mat-primary, 500),
+    accent: mat.define-palette($mat-primary, 500),
     warn: mat.define-palette(mat.$red-palette, 500),
   )
 ));
@@ -68,7 +68,7 @@ $light-background-custom: (
   app-bar: white,
   background: white,
   hover: rgba(black, 0.04),
-  card: map-get($mat-primary, 50),
+  card: white,
   dialog: white,
   disabled-button: rgba(black, 0.12),
   raised-button: white,
@@ -94,8 +94,8 @@ $my-custom-typography: mat.define-typography-config(
 //DARK MODE
 $dark-theme: mat.define-dark-theme((
   color: (
-    primary: mat.define-palette($mat-primary, 800),
-    accent: mat.define-palette($mat-secondary, 500),
+    primary: mat.define-palette($mat-primary, 500),
+    accent: mat.define-palette($mat-primary, 50),
     warn: mat.define-palette(mat.$red-palette, 500),
   ),
 ));

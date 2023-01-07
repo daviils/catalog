@@ -16,7 +16,9 @@ export class BaseComponent {
     screenReaderCurrentLabel: `You're on page`
   };
 
-  gridView: GridView = {
+
+
+  g: GridView = {
     col1: '8.333333',
     col2: '16.666667',
     col3: '25',

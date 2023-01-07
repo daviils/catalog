@@ -16,6 +16,9 @@ import {MatButtonToggle, MatButtonToggleModule} from "@angular/material/button-t
 import {TranslateLoader, TranslateModule, TranslateService} from "@ngx-translate/core";
 import {httpTranslateLoader} from "../../app.module";
 import {HttpClient} from "@angular/common/http";
+import {FlexLayoutModule} from "@angular/flex-layout";
+import {MatInputModule} from "@angular/material/input";
+import {MatBadgeModule} from "@angular/material/badge";
 
 @NgModule({
   declarations: [
@@ -29,12 +32,15 @@ import {HttpClient} from "@angular/common/http";
     MatButtonModule,
     MatSliderModule,
     MatIconModule,
+    MatBadgeModule,
     MatToolbarModule,
     MatMenuModule,
     MatSidenavModule,
     MatListModule,
     MatSlideToggleModule,
+    MatInputModule,
     MatButtonToggleModule,
+    FlexLayoutModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
